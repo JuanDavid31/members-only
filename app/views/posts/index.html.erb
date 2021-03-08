@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+  <%= link_to 'Log out', destroy_user_session_path, method: :delete, :confirm => 'Are you sure?' %>
+<% else %>
+  <%= link_to 'Sign in', new_user_session_path %>
+<% end %>
+
+<h1>Posts</h1>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_posts_url %>
+<% end %>
+
+<% @posts.each do |p| %>
+  <div>
+    <label>Title:</label>
+    <%= p.title %>
+  </div>
+  <div>
+    <label></label>
+    <%= p.body %>
+  </div>
+  <% if user_signed_in? %>
+    <div>
+      <label>Author: <%= p.user.name %></label>
+    </div>
+  <% end %>
+  <br>
+<% end %>
