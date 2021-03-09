@@ -15,13 +15,11 @@
 
 To get a local copy up and running follow these simple steps.
 
-- Go to the main page of te repo. "git clone https://github.com/JuanDavid31/members-only.git"
+- Go to the main page of te repo. `git clone https://github.com/JuanDavid31/members-only.git`
 - Press the "Code" button and get the repo link.
 - Clone it using git.
 - Open terminal on that folder.
-- run `yarn install` 
 - run `npm install`
-- run `rails webpacker:install`
 - run `bundle install`
 - run `rails db: migrate` to migrate the database 
 - run `rails server`
